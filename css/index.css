@@ -1,3 +1,306 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+	width: 880px;
+	max-width: 880px;
+  	margin: auto;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+
+header {
+    display: flex;
+    flex-flow:row wrap;
+	align-items: center;
+	justify-content: space-between;
+	margin: 25px 0px;
+}
+@media (max-width:500px){
+    body{
+        width:100%;
+    }
+    nav{
+        width:100%;
+    }
+    nav .navItem{
+        display:flex;
+        flex-flow:column;
+        border-bottom:1px solid black;
+        padding-left:45%;
+    }
+    /* header nav .link{
+        border-top:1px solid black;
+        border-bottom:1px solid black;
+        width:100%;
+        padding-left: 45%;
+        padding-right:25%;
+    } */
+    header nav .navItem:nth-child(1){order:2; }
+    header nav .navItem:nth-child(2){order:3;}
+    header nav .navItem:nth-child(3){order:4;}
+    header nav .navItem:nth-child(4){order:5;}
+    header nav .navItem:nth-child(5){order:6;}
+    header nav .navItem:nth-child(6){order:7;}
+    header nav .navItem:nth-child(7){order:1;}
+    .codeImg{
+        display:none;
+    }
+    .content1{
+        flex-flow:column;
+        padding:2px;
+    }
+    .middle-img{
+        width:100%;
+    }
+
+}
+@media (max-width:800px){
+    body{
+        width:100%;
+    }
+    header{
+        flex-flow:column;
+        align-items:center;
+    }
+    header nav{
+        flex-flow:row wrap;
+        order:2;
+    }
+    header .navImg{
+        order:1;
+        margin-bottom:30px;
+    }
+    .codeImg{
+        display:none;
+    }
+    .middle-img{
+        width:100%;
+    }
 
 
+}
+
+.divider {
+	margin: 20px 0px;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 2px solid black;
+	padding-bottom: 30px;
+}
+
+h1 {
+	font-size: 24px;
+}
+
+.content2 {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	border-bottom: 2px solid black;
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+
+.box {
+	padding: 15px;
+	border: 1px solid black;
+	background-color: #f4f3f4;
+	margin-top: 35px;
+	width: 425px;
+}
+
+.box button {
+	margin-top: 25px;
+	background-color: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 10px 30px;
+	cursor: pointer;
+	float: left;
+}
+
+.side-by-side {
+	display: flex;
+	margin: 25px 0px;
+	justify-content: space-between
+}
+
+ul {
+	list-style-type: square;
+	list-style-position: inside;
+}
+
+ul li {
+	margin: 15px 0px;
+}
+
+footer p {
+	text-align: center
+}
+
+.side-by-side section p {
+	width: 400px;
+}
+
+.services-info-img {
+
+}
+
+
+/*////////////////////////////////////*/
+
+header {
+	position: static;
+	top: 0;
+	z-index:100;
+	background-color: white;
+}
+
+header nav a {
+	text-decoration: none;
+	color: grey;
+	transition: color .6s, background-color .6s, border-radius .6s;
+	padding: 10px 30px;
+}
+
+header nav a:hover {
+	background-color: black;
+	color: white;
+	border-radius: 30px;
+	cursor: pointer;
+}
+
+
+.seperator {
+	border-bottom: 1px solid black;
+	padding-bottom: 50px;
+}
+
+button {
+	border: 1px solid black;
+	background-color: white;
+	font-size: 20px;
+	padding: 5px 40px;
+	margin: 0 auto;
+	display: block;
+	transition: border .7s, background-color .7s, border-radius .7s, color .7s;
+}
+
+button:hover {
+	border-radius: 30px;
+	background-color: black;
+	color: white;
+	border: 1px solid white;
+	cursor: pointer;
+}
+
+.title {
+	border-bottom: 1px solid black;
+	display: flex;
+	align-items: center;
+	padding-bottom: 25px;
+	justify-content: space-between
+}
+
+.title img {
+	
+}
+
+aside {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 2;
+	
+}
+
+.title aside h1 {
+	font-size: 60px;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.content1 {
+	margin: 50px 0px;
+	display: flex;
+}
+
+.content1 section {
+	margin: 5px;
+}
+
+.content1 section p {
+	word-break: break-word;
+}
+
+.code {
+	margin: 0 auto;
+}
+
+.contact p.number {
+	margin: 10px 0px;
+}
+
+footer p {
+	text-align: center;
+	margin: 30px;
+}

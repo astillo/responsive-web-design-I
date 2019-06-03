@@ -95,7 +95,7 @@ header {
         padding-left: 45%;
         padding-right:25%;
     } */
-    header nav .navItem:nth-child(1){order:2; }
+    header nav .navItem:nth-child(1){order:2; border-top:1px solid black; }
     header nav .navItem:nth-child(2){order:3;}
     header nav .navItem:nth-child(3){order:4;}
     header nav .navItem:nth-child(4){order:5;}

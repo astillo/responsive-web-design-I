@@ -223,12 +223,7 @@ header nav a {
 	padding: 10px 30px;
 }
 
-header nav a:hover {
-	background-color: black;
-	color: white;
-	border-radius: 30px;
-	cursor: pointer;
-}
+
 
 
 .seperator {
